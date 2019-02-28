@@ -1,0 +1,146 @@
+﻿﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	    <title>官方网页</title>
+	    <link rel="icon" href="sta/img/bitbug_favicon.ico" type="sta/img/bitbug_favicon.ico" />
+		<link rel="shortcut icon" href="sta/img/bitbug_favicon.ico" type="sta/img/bitbug_favicon.ico" />
+		<link rel="bookmark" href="sta/img/bitbug_favicon.ico" type="sta/img/bitbug_favicon.ico" />
+	
+	    <!-- 清除缓存,每次登录页面都从服务器获取数据 每次都刷新  -->
+	    <meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		
+		<!-- 网页描述 -->
+	    <meta name="keywords" content="开心,手游,水果机,万炮捕鱼">
+	    <meta name="description" content="开心川麻官网">
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	    <meta name="content-type" content="text/html; charset=UTF-8">
+	    
+	    <!--width=device-width 是设备宽度   ,initial-scale=1.0 页面缩放值 ,maximum-scale=1.0,maximum-scale=1.0 允许用户使用的缩放值  user-scalable=no 不允许用户进行缩放   -->
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	    
+	    <script src="static/js/jquery-2.1.4.min.js"></script>
+	<script src="static/js/config.js"></script>
+	    
+	</head>
+	<style type="text/css">
+		body{
+			background-color:rgba(195,195,195,1);
+			padding: 0;
+			margin: 0;
+		}
+		@media(min-width:900px){
+			#bg{
+				width:800px;
+				height:2128px;
+			}
+		}
+		@media(max-width:899px){
+			#bg{
+				width:100%;
+				background-size: 100% auto;
+			}
+		}
+		#bg{
+			margin: auto;
+			background-image: url(static/images/beijing.png);
+		}
+		.nullDiv{
+			width: 100%;
+			height: 15%;
+		}
+		
+		.erweima{
+			padding-left: 30%;
+			padding-right:30%;
+
+		}
+		.btn{
+			padding-top: 2%;
+			padding-left: 10%;
+			padding-right:10%;
+		}
+		.anniu{
+			width:48%;
+			float:left;
+		}
+		.anniu2{
+			float:right;
+		}
+		img{
+			width: 95% ;
+		}
+		.anniu img{
+			width: 100%;
+		}
+		
+	</style>
+	<body>
+		<div id='bg'>
+			<div class='nullDiv'></div>
+			<div class='kuang'>
+				<div class='erweima'>
+					<img alt="" src="static/picture/ewm.png">
+				</div>
+				<div class='btn'>
+					<div class='anniu'><a onclick="gameDown()"><img alt="" src="static/picture/anniu_xiazai.png"></a></div>
+					<div class='anniu anniu2'><a href="bangzhu.html"><img alt="" src="static/picture/anniu_ios.png"></a></div>															
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	function gameDown(){
+		 var ua = navigator.userAgent.toLowerCase();
+		var u = "";
+		var index = 0;
+		if (/android|adr/gi.test(ua)) {
+			index = neizhi();
+			if(index == 3){
+				u = main;
+			}else{
+				u = az;
+			}
+			window.location.replace(u);
+		}else if(/\(i[^;]+;( U;)? CPU.+Mac OS X/gi.test(ua)){
+			index = neizhi();
+			if(index == 3){
+				u = main;
+			}else{
+				u = ios;
+			}
+			window.location.replace(u);  
+		}else if(/iPad/gi.test(ua)){
+			index = neizhi();
+			if(index == 3){
+				u = main;
+			}else{
+				u = ios;
+			}
+			window.location.replace(u);  
+		}else {
+			alert('抱歉，我们暂没有推出您手机系统对应的应用。');
+			window.location.href="";
+		};
+		
+		function neizhi(){
+			//新浪微博内置浏览器的判断
+			if(ua.match(/MicroMessenger/i)=="micromessenger"){  
+		    	alert('抱歉，由于微信屏蔽下载，请点击右上角三个点，用其他浏览器打开进行下载（如百度，UC，谷歌等）。');	  
+		    	return 3;	 
+			}else{  
+	        	return 4;  
+	    	}
+		};
+	}
+	
+	$(function(){
+    	if($(window).width()<900){
+    		var winheight = $(window).width();
+    		winheight = (winheight/800)*2128;
+    		$('#bg').height(winheight);
+    	}
+	});
+	</script>
+</html>
