@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/default.css"/>
+		<link rel="stylesheet" type="text/css" href="css/search-form.css"/>
+	</head>
+	<body>
+		<form onSubmit="submitFn(this, event);">
+			<div class="search-wrapper">
+				<div class="input-holder">
+					<input type="text" class="search-input" placeholder="您输入的金额" />
+					<button class="search-icon" onClick="searchToggle(this, event);"><span></span></button>
+				</div>
+				<span class="close" onClick="searchToggle(this, event);"></span>
+				<div class="result-container">
+					
+				</div>
+			</div>
+		</form>
+		
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function searchToggle(obj, evt){
+			var container = $(obj).closest('.search-wrapper');
+		
+			if(!container.hasClass('active')){
+				  container.addClass('active');
+				  evt.preventDefault();
+			}
+			else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+				  container.removeClass('active');
+				  // clear input
+				  container.find('.search-input').val('');
+				  // clear and hide result container when we press close
+				  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+			}
+		}
+		var value;
+		function submitFn(obj, evt){
+			value = $(obj).find('.search-input').val().trim();
+			
+			if(!value.length){
+				_html = "金额不能为空。";
+			}
+			$(obj).find('.result-container').html('<audio autoplay controls src=https://mm.cqu.cc/share/zhifubaodaozhang/mp3/'+value+'.mp3>您的浏览器不支持audio标签。</audio>');
+			
+			$(obj).find('.result-container').fadeIn(100);
+			
+			evt.preventDefault();
+		}
+	</script>
+</html>
