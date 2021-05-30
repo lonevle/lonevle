@@ -585,7 +585,7 @@
 <td align="left"><code>downloads/code</code></td>
 </tr>
 </tbody></table>
-<p>| <code>skip_render</code>  | 跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 <code>public</code> 目录中。您可使用 <a href="https://github.com/micromatch/micromatch#extended-globbing">glob 表达式</a>来匹配路径。 |                  |</p>
+<p>| <code>skip_render</code>  | 跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 <code>public</code> 目录中。您可使用 <a target="_blank" rel="noopener" href="https://github.com/micromatch/micromatch#extended-globbing">glob 表达式</a>来匹配路径。 |                  |</p>
 <p>例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">skip_render: &quot;mypage/**/*&quot;</span><br><span class="line"># 将会直接将 `source/mypage/index.html` 和 `source/mypage/code.js` 不做改动地输出到 &#x27;public&#x27; 目录</span><br><span class="line"># 你也可以用这种方法来跳过对指定文章文件的渲染</span><br><span class="line">skip_render: &quot;_posts/test-post.md&quot;</span><br><span class="line"># 这将会忽略对 &#x27;test-post.md&#x27; 的渲染</span><br></pre></td></tr></table></figure>
 
@@ -705,7 +705,7 @@
 <td align="left">部署部分的设置</td>
 </tr>
 </tbody></table>
-<h3 id="包括或不包括目录和文件"><a href="#包括或不包括目录和文件" class="headerlink" title="包括或不包括目录和文件"></a>包括或不包括目录和文件</h3><p>在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 <a href="https://github.com/isaacs/minimatch">glob 表达式</a> 对目录和文件进行匹配。</p>
+<h3 id="包括或不包括目录和文件"><a href="#包括或不包括目录和文件" class="headerlink" title="包括或不包括目录和文件"></a>包括或不包括目录和文件</h3><p>在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 <a target="_blank" rel="noopener" href="https://github.com/isaacs/minimatch">glob 表达式</a> 对目录和文件进行匹配。</p>
 <table>
 <thead>
 <tr>
@@ -802,7 +802,7 @@ hexo s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/lonevle/lonevle/lonevle/2021/05/29/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">https://github.com/lonevle/lonevle/lonevle/2021/05/29/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</a>
+                    <a href="https://lonevle.github.io/lonevle/2021/05/29/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">https://lonevle.github.io/lonevle/2021/05/29/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1049,16 +1049,16 @@ hexo s
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/lonevle/2021/05/29/hello-world/">
+                <a href="/lonevle/2021/05/29/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/lonevle/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/lonevle/medias/featureimages/14.jpg" class="responsive-img" alt="关于博客的搭建">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">关于博客的搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1079,6 +1079,7 @@ hexo s
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
